@@ -1,11 +1,10 @@
 const express = require('express');
-const http = require('http');
 const socketIo = require('socket.io');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
 const app = express();
-const server = http.createServer(app);
+const server = require('http').createServer(app);
 const io = socketIo(server);
 
 app.use(cors());
@@ -28,8 +27,8 @@ app.get('/', (req, res) => {
 
 io.on('connection', (socket) => {
   console.log('New client connected');
-
-  socket.on('disconnect', () => {
+  
+socket.on('disconnect', () => {
     console.log('Client disconnected');
   });
 });
