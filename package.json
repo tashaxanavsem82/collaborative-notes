@@ -1,6 +1,6 @@
 {
   "name": "collaborative-notes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A web-based application for collaborative note-taking.",
   "main": "server.js",
   "scripts": {
